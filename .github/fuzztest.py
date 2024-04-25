@@ -56,7 +56,7 @@ def start_polling():
             response = requests.get(f'{api_url}/analyses/{analysis_id}/crashes', headers=headers)
             for crash in response.json():
                 print(crash['stackTrace'])
-                print('Found crashes visit https://fuzzer.cydarien.com to download crashes.')
+                print('Found crashes visit http://205.174.165.75:2151/ to download crashes.')
                 exit(1)
         if data['status'] == 'T':
             exit(0)
